@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook "ntp"
+cookbook "openssh"
+cookbook "php"
+cookbook "apache2"
+cookbook "mysql"
+cookbook "apt"
+cookbook "git"
+cookbook "composer"
+
+# install oh-my-zsh
+cookbook "chef-oh-my-zsh",
+    :git => "git://github.com/tlayh/chef-oh-my-zsh.git"
+
+# install cucmber
+cookbook "tl-cucumber",
+    :git => "git://github.com/tlayh/tl-cucumber.git"

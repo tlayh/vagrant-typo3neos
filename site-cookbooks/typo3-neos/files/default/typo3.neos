@@ -1,0 +1,20 @@
+<VirtualHost *:80>
+
+	ServerAdmin typo3neos@localhost.de
+	ServerName typo3.neos
+
+	DocumentRoot /var/www/typo3.neos/Web/
+
+	SetEnv FLOW_CONTEXT Development
+
+	<Directory /var/www/typo3.neos>
+
+		Options FollowSymLinks
+		AllowOverride FileInfo Options=All,MultiViews
+
+		<Ifmodule mod_php5.c>
+			php_admin_value memory_limit 256M
+		</Ifmodule>
+
+	</Directory>
+</VirtualHost>
