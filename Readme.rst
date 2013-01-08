@@ -15,15 +15,18 @@ Installation:
 1. Setup Ruby and RubyGems on your system.
 
 2. Install Vagrant and Librarian
+
 ::
    gem install vagrant
    gem install librarian
 
 3. Install required cookbooks
+
 ::
    librarian-chef install
 
 4. Add to your host file
+
 ::
    192.168.23.4 typo3.neos
 
