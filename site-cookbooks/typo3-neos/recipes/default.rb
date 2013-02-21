@@ -59,7 +59,6 @@ end
 execute "install TYPO3 Neos" do
 	command "php composer.phar install --dev"
 	cwd "/var/www/typo3.neos"
-
 end
 
 execute "fixing permissions" do
