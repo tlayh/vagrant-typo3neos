@@ -9,18 +9,18 @@
 # Install TYPO3 Neos + DevStuff
 
 
-include_recipe "apache2"
+include_recipe 'apache2'
 ['rewrite', 'deflate', 'php5', 'headers', 'expires', 'status', 'negotiation', 'setenvif'].each do |mod|
-	include_recipe "apache2::mod_#{mod}"
+	include_recipe 'apache2::mod_#{mod}'
 end
 
 include_recipe "php::package"
 ['apc', 'curl', 'gd', 'mysql', 'sqlite3'].each do |mod|
 	include_recipe "php::module_#{mod}"
 end
-include_recipe "mysql::server"
-include_recipe "git"
-include_recipe "typo3-neos::basic"
+include_recipe 'mysql::server'
+include_recipe 'git'
+include_recipe 'typo3-neos::basic'
 
 # setup host
 cookbook_file "/etc/apache2/sites-available/typo3.neos" do
