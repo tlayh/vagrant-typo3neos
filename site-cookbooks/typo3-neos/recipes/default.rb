@@ -11,7 +11,7 @@
 
 include_recipe 'apache2'
 ['rewrite', 'deflate', 'php5', 'headers', 'expires', 'status', 'negotiation', 'setenvif'].each do |mod|
-	include_recipe 'apache2::mod_#{mod}'
+	include_recipe "apache2::mod_#{mod}"
 end
 
 include_recipe "php::package"
