@@ -17,6 +17,7 @@ Installation:
 
 2. Install Librarian and librarian-chef and vagrant-vbguest
 ::
+   vagrant plugin install chef
    vagrant plugin install librarian
    vagrant plugin install librarian-chef
    vagrant plugin install vagrant-vbguest

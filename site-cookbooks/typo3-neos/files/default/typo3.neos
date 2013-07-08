@@ -1,7 +1,7 @@
 <VirtualHost *:80>
 
-	ServerAdmin typo3neos@localhost.de
 	ServerName typo3.neos
+	ServerAdmin typo3neos@localhost.de
 
 	DocumentRoot /var/www/typo3.neos/Web/
 

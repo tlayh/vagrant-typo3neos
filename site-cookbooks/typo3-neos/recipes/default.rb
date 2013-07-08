@@ -18,6 +18,7 @@ include_recipe "php::package"
 ['apc', 'curl', 'gd', 'mysql', 'sqlite3'].each do |mod|
 	include_recipe "php::module_#{mod}"
 end
+
 include_recipe 'mysql::server'
 include_recipe 'git'
 include_recipe 'typo3-neos::basic'
@@ -47,7 +48,7 @@ end
 
 # clone and install typo3flow
 execute "clone typo3.neos base" do
-	command "git clone git://git.typo3.org/TYPO3v5/Distributions/Base.git /var/www/typo3.neos"
+	command "git clone git://git.typo3.org/Neos/Distributions/Base.git /var/www/typo3.neos"
 	creates "/var/www/typo3.neos/"
 end
 
