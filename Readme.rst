@@ -40,7 +40,8 @@ Will take about 10 Minutes, depending on your system speed and download rate
 After the setup is complete, open http://typo3.neos/setup and follow the instructions
 
 7. Database
-   Username/Password: root/root
+
+Username/Password: root/root
 
 8. Shutdown with "vagrant suspend" and restart with "vagrant resume"
 
